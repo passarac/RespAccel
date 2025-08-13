@@ -1,7 +1,8 @@
 # RespAccel
 Generate respiratory signals from tri-axal accelerometer data from a chest-worn sensor. Apply cleaning and filtering to identify valid and reliable segments of respiratory data.
 
-=======
+---
+
 ## Respiratory Waveform Estimation
 
 The overall goal is to turn raw tri-axal accelerometer stream into a clean, respiration-related flow-like waveform during periods when the person is static. The key idea is that, at rest, chest wall motion rotates the gravity vector in the device frame. If you can:
