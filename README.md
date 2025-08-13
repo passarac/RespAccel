@@ -136,4 +136,3 @@ This code is based from the method described in the paper by Bates et al. (2010)
 ## References
 
 Bates, A., Ling, M. J., Mann, J., & Arvind, D. K. (2010). Respiratory rate and flow waveform estimation from tri-axial accelerometer data. _2010 International Conference on Body Sensor Networks (BSN)_, 144–150. https://doi.org/10.1109/BSN.2010.50
->>>>>>> 0dd15ce (Respiratory Waveform Estimation from Accelerometer Data)
