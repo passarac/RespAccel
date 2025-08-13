@@ -1,7 +1,7 @@
 import numpy as np
 
-from computeRotationAxes import *
-from findReferenceAxis import *
+from .computeRotationAxes import *
+from .findReferenceAxis import *
 
 def track_rotation_axis(accel_data, window_size=32, angle_weight=True):
     """

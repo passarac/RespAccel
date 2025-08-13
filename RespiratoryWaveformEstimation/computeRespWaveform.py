@@ -31,3 +31,16 @@ def compute_resp_waveform(phi, fs=50.0, do_smooth=True, cutoff=1.0, order=2):
         resp_waveform = raw_derivative
 
     return resp_waveform
+
+
+def compute_resp_waveform_bandpass(phi, fs, f_lo=0.03, f_hi=1.2, order=2):
+    """Differentiate phi and apply Butterworth band-pass to keep plausible breathing."""
+    # 1) numerical derivative -> flow-like
+    flow = np.gradient(phi, 1.0/fs)
+
+    # 2) band-pass (zero-phase)
+    nyq = fs * 0.5
+    low = max(f_lo/nyq, 1e-6)
+    high = min(f_hi/nyq, 0.999999)
+    b, a = butter(order, [low, high], btype="band")
+    return filtfilt(b, a, flow)
